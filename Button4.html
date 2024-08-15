@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button4</title>
+    <style>
+         body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+        }
+        a{
+            padding: 40px 70px;
+            text-decoration: none;
+            color: transparent;
+            border: 2px solid black;
+            font-size: 44px;
+            position: relative;
+            background-color: darkcyan;
+            overflow: hidden;
+        }
+        a::before{
+            content: "Hover Me";
+            color: black;
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color:yellow ;
+            top: 0;
+            left: 0;
+            transition: 0.5s ease-out;
+            
+        }
+        a::after{
+            content: "Hover Me";
+            display: flex;
+            color: black;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color:yellow ;
+            top: 0;
+            left: 0;
+            transform: translate(-100%,100%  );
+            transition: 0.5s ease-out;
+        }
+        a:hover::before{
+            transform: translate(100%,-100%  );
+        }
+        a:hover::after{
+            transform: translate(0,0);
+
+        }
+    </style>
+</head>
+<body>
+    <a href="#">Hover Me</a>
+    
+</body>
+</html>

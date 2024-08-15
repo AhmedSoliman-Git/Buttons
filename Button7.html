@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button7</title>
+</head>
+<body>
+    <style>
+        body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        
+
+}
+a{
+            font-size: 40px;
+        padding: 40px 70px;
+        color: white;
+        text-decoration: none;
+        border: 2px solid tomato;
+        position: relative;
+        transition: 0.3s ease-out;
+        font-weight: 100;
+        text-transform:uppercase;
+        background-color: tomato;
+}
+a::before{
+    content: "Hover Me";
+    background-color: rgb(206, 200, 20);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(206, 200, 20);
+    transform-origin: top;
+    transform: rotateX(270deg);
+    transition: all 0.5s 0.3s;
+
+}
+a::after{
+    content: "Hover Me";
+    background-color: rgb(20, 206, 85);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(20, 206, 85);
+    transform-origin: top;
+    transform: rotateX(-270deg);
+    transition: all 0.5s;
+
+    
+
+}
+a:hover::before{
+    transform: rotateX(0deg);
+    transition: all 0.5s;
+
+}
+a:hover::after{
+    transition: all 0.5s 0.3s;
+    transform: rotateX(0deg);
+}
+
+</style>
+<a href="#">Hover Me</a>
+</body>
+</html>
